@@ -17,8 +17,11 @@ VOLUME ["/data"]
 # default path when execute
 WORKDIR /data
 
+# use entry point
+ENTRYPOINT ["rethinkdb"]
+
 # allow all access
-CMD ["rethinkdb","--bind","all"]
+CMD ["--bind","all"]
 
 # private port for map when run container
 EXPOSE 8080 28015 29015
